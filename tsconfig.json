@@ -8,6 +8,8 @@
     "strict": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    //this is used for direct extracting field from json pbject.
+    "suppressImplicitAnyIndexErrors": true,
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,

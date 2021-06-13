@@ -1,0 +1,17 @@
+/* it will add a gost element in the top so the our fixed top navbar does not overlap with starting banner */
+
+
+/* body::before {
+    display: block;
+    content: '';
+    height: 60px;
+} */
+
+
+/*over 768px input group width is 50%*/
+
+@media (min-width: 768px) {
+    .new-letter {
+        width: 50%;
+    }
+}

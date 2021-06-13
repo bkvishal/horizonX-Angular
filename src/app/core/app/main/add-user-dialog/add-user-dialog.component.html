@@ -1,0 +1,34 @@
+<div class="bg-dark p-3">
+    <div class="container text-center">
+        <h1 class="text-white mb-3">{{ !data.sapId ? 'Add new user' : 'Update this user' }}</h1>
+        <p class="lead mb-3 text-white">Fill out all the required details correctly.</p>
+    </div>
+</div>
+
+<div class="bg-light p-5">
+    <form [formGroup]="formAdd">
+        <div class="mb-3">
+            <input type="text" class="form-control" formControlName="empName" name="" placeholder="Enter the username">
+        </div>
+        <div class="mb-3 w-50">
+            <input type="text" class="form-control" formControlName="designation" name="" placeholder="Enter Designation">
+        </div>
+        <div class="mb-3 w-50">
+            <input type="text" class="form-control" formControlName="number" name="" placeholder="Enter Mobile Number">
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" formControlName="address" name="" placeholder="Enter Address">
+        </div>
+        <div class="mb-4 w-50">
+            <input type="text" class="form-control" formControlName="country" name="" placeholder="Enter the Country">
+        </div>
+
+        <div class="d-flex justify-content-end">
+            <div>
+                <button class="btn btn-outline-primary mx-3" (click)="closeDialog()">Cancel</button>
+                <button class="btn btn-primary" (click)="addedOrUpdateUser()"> {{ data.sapId ? 'Update' : 'Add'}} </button>
+            </div>
+        </div>
+    </form>
+
+</div>

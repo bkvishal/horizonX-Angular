@@ -1,0 +1,160 @@
+<div class="bg-dark p-5">
+    <div class="container text-white text-center">
+        <h1 class="fw-bold">Manage your users here.</h1>
+        <p class="lead mb-5">All your existing users are display here and you can also manage or create new user</p>
+
+        <button type="button" class="btn text-light border-primary" (click)="addOrUpdateEmployee(employe)"><i class="bi bi-chevron-double-right"></i> Add New User Now</button>
+    </div>
+</div>
+
+
+<div class="bg-light p-4">
+    <div class="container">
+
+        <!-- input is already align to end if you want to make it small just add in input clas 'w-50' it will shink it size to 50% -->
+        <div class="d-flex justify-content-end">
+            <input type="text" class="form-control mb-5 bg-light" placeholder="Search with specific keywords" [(ngModel)]="filterString">
+        </div>
+
+        <div class="row g-4">
+            <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let emp of employees | filter: filterString">
+                <div class="card bg-dark">
+                    <div class="card-body text-center">
+                        <img src="https://randomuser.me/api/portraits/men/11.jpg" class="rounded-circle mb-3" alt="">
+                        <div class="card-title mb-4 text-light fw-bold">{{ emp.empName }}</div>
+                        <div class="card-text">
+                            <ul class="list-group list-group-flush mb-4">
+                                <!-- sapid -->
+                                <li class="list-group-item">
+                                    <span class="fw-bold">SAP ID : </span> {{emp.sapId}}
+                                </li>
+                                <!-- designation -->
+                                <li class="list-group-item">
+                                    <span class="fw-bold">Designation : </span> {{emp.designation}}
+                                </li>
+                                <!-- number -->
+                                <li class="list-group-item">
+                                    <span class="fw-bold">Number : </span> {{emp.number}}
+                                </li>
+                                <!-- address -->
+                                <li class="list-group-item">
+                                    <span class="fw-bold">Address : </span> {{emp.address}}
+                                </li>
+                                <!-- country -->
+                                <li class="list-group-item">
+                                    <span class="fw-bold">Country : </span> {{emp.country}}
+                                </li>
+                            </ul>
+
+                            <div class="">
+                                <button type="button" class="btn btn-outline-primary mx-3" (click)="addOrUpdateEmployee(emp)"><i class="bi bi-plus-lg"></i> Edit</button>
+                                <button type="button" class="btn btn-outline-danger" (click)="deleteEmp(emp.sapId)"><i class="bi bi-trash"></i> Delete</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="main-frame">
+
+  <mat-toolbar>
+    <input matInput placeholder="Search" [(ngModel)]="filterString">
+  </mat-toolbar>
+
+  <div class="main-div">
+    <div *ngFor="let emp of employees | filter: filterString">
+      <mat-card>
+        <mat-card-title>{{ emp.empName }}</mat-card-title>
+        <mat-card-subtitle>{{ emp.designation}}</mat-card-subtitle>
+        <img class="dp-image"
+             alt=""
+             mat-card-image
+             src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50">
+        <mat-card-content>
+          <span>Mobile Number : </span>
+          {{ emp.number }}
+        </mat-card-content>
+        <mat-card-content>
+          <span>Address : </span>
+          {{ emp.address }}
+        </mat-card-content>
+        <mat-card-content>
+          <span>Country : </span>
+          {{emp.country}}
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" (click)="updateEmp(emp)">Edit</button>
+          <button mat-raised-button color="warn" (click)="deleteEmp()">Delete</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+
+</div> -->

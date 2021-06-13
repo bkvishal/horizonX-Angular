@@ -1,0 +1,26 @@
+mat-card {
+  height: 430px;
+  width: 220px;
+  margin: 10px 10px 10px 10px;
+}
+
+.dp-image {
+  height: 200px;
+  width: 250px;
+  border-radius: 4px;
+}
+
+.main-div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.main-frame {
+  background-color: darkgray;
+  border-radius: 8px;
+  margin-left: 50px;
+  margin-top: 40px;
+  margin-right: 40px;
+  padding: 10px 10px 10px 25px;
+}
